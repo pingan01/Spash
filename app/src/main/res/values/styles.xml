@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme_Splash" parent="AppTheme.NoActionBar">
+        <!--@null黑屏  @drawable/icon放一张启动图片-->
+        <item name="android:windowBackground">@drawable/white_theme_bg</item>
+        <!--启动界面是否显示应用名称 true不显示 false显示-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme_Welcome" parent="AppTheme.NoActionBar">
+
+        <item name="android:windowDisablePreview">true</item>
+        <!--@null黑屏 @drawable/icon放一张启动图片-->
+        <item name="android:windowBackground">@drawable/ic_splash</item>
+        <!--启动界面是否显示应用名称 true不显示 false显示-->
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+</resources>
