@@ -11,13 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SpashActivity"
+            android:name=".WelcomeActivity"
             android:theme="@style/AppTheme_Splash"
             android:screenOrientation="portrait"
             ></activity>
         <activity
-            android:name=".WelcomeActivity"
-            android:theme="@style/AppTheme_Welcome"
+            android:name=".SpashActivity"
+            android:theme="@style/Spash"
             android:screenOrientation="portrait"
             >
             <intent-filter>

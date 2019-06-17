@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
@@ -19,11 +21,22 @@ import java.lang.reflect.Method;
  */
 public class SpashActivity extends AppCompatActivity {
 
+    private static final Handler mHandler = new Handler(Looper.myLooper());
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setStatusTransparent(this);
         setContentView(R.layout.activity_spash);
+
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(SpashActivity.this, MainActivity.class));
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                finish();
+            }
+        }, 50);
     }
 
     /**
@@ -110,9 +123,4 @@ public class SpashActivity extends AppCompatActivity {
         }
     }
 
-    public void onClick(View view) {
-        startActivity(new Intent(this, MainActivity.class));
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        finish();
-    }
 }

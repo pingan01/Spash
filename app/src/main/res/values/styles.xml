@@ -29,4 +29,12 @@
         <item name="android:windowNoTitle">true</item>
 
     </style>
+
+    <style name="Spash" parent="AppTheme.NoActionBar">
+
+        <item name="android:windowBackground">@drawable/preview_window</item>
+        <item name="android:windowFullscreen">true</item>
+
+    </style>
+
 </resources>
